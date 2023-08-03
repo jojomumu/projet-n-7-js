@@ -19,11 +19,15 @@
 
                 <div id="head">
 
-                    <img src="media/coffee-digital.png" alt="logo break time" id="logo" width="130" height="130">
+                    <img src="media/coffee-digital.png" alt="logo break time" id="logo-simple" width="110" height="110">
+
+                    <img id="logo-classy" src="media/coffee-classy.png" alt="logo break time" width="110" height="110" style="display: none;">
+
+                    <img id="logo-impact" src="media/coffee-impact.png" alt="logo break time" width="110" height="110" style="display: none;">
 
                     <h1 id="title">Break time</h1>
 
-                    <p><img src="media/gear-digital.png" alt="gear" width="50" height="50"></p>
+                    <p id="gear" onclick="showPopup()"><img src="media/gear-digital.png" alt="gear" width="50" height="50" id="gear-simple"><img src="media/gear-classy.png" alt="gear" width="50" height="50" style="display: none;" id="gear-classy"><img src="media/gear-impact.png" alt="gear" width="50" height="50" style="display: none;" id="gear-impact"></p>
 
 
                 </div>
@@ -34,13 +38,13 @@
 
                         <div id="butttimer">
 
-                            <input type="radio" id="pomo" class="switch" name="butt">
+                            <input type="radio" id="pomo" class="switch" name="butt" data-time="25" checked>
                             <label for="pomo">pomodoro</label>
 
-                            <input type="radio" id="short" class="switch" name="butt">
+                            <input type="radio" id="short" class="switch" name="butt" data-time="5">
                             <label for="short">short</label>
 
-                            <input type="radio" id="long" class="switch" name="butt">
+                            <input type="radio" id="long" class="switch" name="butt" data-time="20">
                             <label for="long">long</label>
                     
                         </div>
@@ -56,6 +60,49 @@
 
                     </div>
 
+
+                </div>
+
+
+                <div id="popupDiv">
+
+                    <div id="end">
+                    
+                    <button onclick="hidePopup()" id="close"><img src="media/cross.png" alt="cross" width="40" height="40"></button>
+                    
+                    </div>
+
+                    <h2>Select theme :</h2>
+
+                    <select name="theme" id="change" onchange="changeTheme(this.value)">
+                        <option value="Simple">Simple</option>
+                        <option value="Classy">Classy</option>
+                        <option value="Impact">Impact</option>
+                    </select>
+
+
+                    <h2>Timers :</h2>
+
+                    <div id="timech">
+
+                        <input type="text" id="timeInput1" class="inputtim" value="25" oninput="updateTime(1)">
+                        
+                        
+                        <input type="text" id="timeInput2" class="inputtim" value="20" oninput="updateTime(2)">
+                        
+                        
+                        <input type="text" id="timeInput3" class="inputtim" value="5" oninput="updateTime(3)">
+                        
+
+                    </div>
+
+                    <div id="tag">
+                        <p>pomo</p>
+                        <p>long</p>
+                        <p>short</p>                  
+                    </div>
+
+                    <h2>Alert volume :</h2>
 
                 </div>
 
