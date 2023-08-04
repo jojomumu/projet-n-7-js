@@ -49,9 +49,10 @@ radioButtons.forEach((radio) => {
 
 radioButtons.forEach((radio, index) => {
   radio.addEventListener("change", function () {
-    const targetInputId = radio.getAttribute("data-target");
-    const targetInput = document.getElementById(targetInputId);
-    minutes = parseInt(targetInput.value, 10);
+    if (!paused) {
+      resetTimer();
+    }
+    minutes = parseInt(timeInputs[index].value, 10);
     updateDisplay(minutes, 0);
   });
 });
@@ -132,12 +133,16 @@ function changeTimer(newMinutes) {
   updateDisplay(minutes, 0);
 }
 
-
-
 function updateTime(inputNumber) {
   const timeInput = document.getElementById(`timeInput${inputNumber}`);
   const minutes = parseInt(timeInput.value, 10);
   if (!isNaN(minutes)) {
       changeTimer(minutes);
   }
+}
+
+function resetTimer() {
+  clearInterval(intervalId);
+  document.getElementById("start").value = "START";
+  paused = true;
 }
