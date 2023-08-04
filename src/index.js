@@ -40,10 +40,41 @@ function getSelectedTime() {
 const radioButtons = document.querySelectorAll(".switch");
 radioButtons.forEach((radio) => {
   radio.addEventListener("change", function () {
-    minutes = getSelectedTime();
-    updateDisplay(minutes, 0); 
+    const targetInputId = radio.getAttribute("data-target");
+    const targetInput = document.getElementById(targetInputId);
+    minutes = parseInt(targetInput.value, 10);
+    updateDisplay(minutes, 0);
   });
 });
+
+radioButtons.forEach((radio, index) => {
+  radio.addEventListener("change", function () {
+    const targetInputId = radio.getAttribute("data-target");
+    const targetInput = document.getElementById(targetInputId);
+    minutes = parseInt(targetInput.value, 10);
+    updateDisplay(minutes, 0);
+  });
+});
+
+const timeInputs = document.querySelectorAll(".inputtim");
+timeInputs.forEach((input, index) => {
+  input.addEventListener("input", function () {
+    if (radioButtons[index].checked) {
+      minutes = parseInt(input.value, 10);
+      updateDisplay(minutes, 0);
+    }
+  });
+});
+
+timeInputs.forEach((input, index) => {
+  input.addEventListener("input", function () {
+    if (radioButtons[index].checked) {
+      minutes = parseInt(input.value, 10);
+      updateDisplay(minutes, 0);
+    }
+  });
+});
+
 
 let intervalId;
 let paused = true;
@@ -96,3 +127,17 @@ function formatTime(time) {
   return time < 10 ? `0${time}` : time;
 }
 
+function changeTimer(newMinutes) {
+  minutes = newMinutes;
+  updateDisplay(minutes, 0);
+}
+
+
+
+function updateTime(inputNumber) {
+  const timeInput = document.getElementById(`timeInput${inputNumber}`);
+  const minutes = parseInt(timeInput.value, 10);
+  if (!isNaN(minutes)) {
+      changeTimer(minutes);
+  }
+}
