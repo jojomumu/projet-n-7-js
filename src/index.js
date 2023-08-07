@@ -1,13 +1,17 @@
 function showPopup() {
     var popupDiv = document.getElementById("popupDiv");
+    var popupOverlay = document.getElementById("popupOverlay");
     
     popupDiv.style.display = "block";
+    popupOverlay.style.display = "block";
 }
 
 function hidePopup() {
     var popupDiv = document.getElementById("popupDiv");
+    var popupOverlay = document.getElementById("popupOverlay");
     
     popupDiv.style.display = "none";
+    popupOverlay.style.display = "none";
 }
 
 function changeTheme(theme) {
@@ -114,7 +118,7 @@ function startTimer() {
 
     if (totalSeconds <= 0) {
       clearInterval(intervalId);
-      alert("Time's up!");
+      playTimerEndSound();
     }
   }, 1000);
 }
@@ -145,4 +149,12 @@ function resetTimer() {
   clearInterval(intervalId);
   document.getElementById("start").value = "START";
   paused = true;
+}
+
+function playTimerEndSound() {
+  const audioElement = document.getElementById("timerEndSound");
+  const volumeSlider = document.getElementById("volumeSlider");
+
+  audioElement.volume = volumeSlider.value;
+  audioElement.play();
 }

@@ -199,6 +199,16 @@ input:checked + label {
     cursor: pointer;
   }
 
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
   #popupDiv {
     position: absolute;
     top: 50%;
@@ -267,4 +277,35 @@ h2{
 
 #timeInput3{
   margin-left: 80px;
+}
+
+#volumeSlider {
+  width: 70%;
+  height: 15px;
+  background-color: #ffffff;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 30px; 
+  height: 30px; 
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+#volumeSlider::-moz-range-thumb {
+  appearance: none;
+  width: 30px; 
+  height: 30px; 
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: solid 1px;
+  cursor: pointer;
 }

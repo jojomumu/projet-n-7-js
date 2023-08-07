@@ -41,11 +41,11 @@
                             <input type="radio" id="pomo" class="switch" name="butt" checked data-target="timeInput1">
                             <label for="pomo">pomodoro</label>
 
-                            <input type="radio" id="short" class="switch" name="butt" data-target="timeInput3">
-                            <label for="short">short</label>
-
-                            <input type="radio" id="long" class="switch" name="butt" data-target="timeInput2">
+                            <input type="radio" id="long" class="switch" name="butt" data-target="timeInput3">
                             <label for="long">long</label>
+
+                            <input type="radio" id="short" class="switch" name="butt" data-target="timeInput2">
+                            <label for="short">short</label>
                     
                         </div>
 
@@ -62,6 +62,8 @@
 
 
                 </div>
+
+                <div class="popup-overlay" id="popupOverlay"></div>
 
 
                 <div id="popupDiv">
@@ -103,6 +105,9 @@
                     </div>
 
                     <h2>Alert volume :</h2>
+
+                    <audio id="timerEndSound" src="media/bell.mp3"></audio>
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
 
                 </div>
 
