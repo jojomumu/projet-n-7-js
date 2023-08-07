@@ -309,3 +309,19 @@ h2{
   border: solid 1px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 320px){
+
+}
+
+@media screen and (max-width: 541px) and (min-width: 321px){
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 541px){
+
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px){
+  
+}
