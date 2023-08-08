@@ -438,8 +438,99 @@ h2{
 
 @media screen and (max-width: 1024px) and (min-width: 541px){
 
+  #inbox {
+    margin: 0;
+  }
+
+  #head{
+    justify-content: center;
+  }
+
+  #title{
+    width: 330px;
+    margin-right: 0px;
+    font-size: 30px;
+  }
+
+  .classymod #title {
+    width: 330px;
+    margin-right: 0px;
+    font-size: 40px;
+  }
+
+  .impactmod #title{
+    margin-right: 0px;
+    font-size: 25px;
+  }
+
+  .gear{
+    margin-right: 20px;
+  }
+
+  #box{
+    width: 500px;
+    height: 350px;
+  }
+
+  #time{
+    width: 220px;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .classymod #time{
+    border: none;
+    font-size: 120px;
+  }
+
+  .impactmod #time{
+    font-family: 'Emblema One', cursive;
+    background-color: transparent;
+    color: black;
+  }
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1025px){
+
+  #inbox {
+    margin: 0;
+  }
+
+  #head{
+    justify-content: center;
+  }
+
+  #title{
+    width: 530px;
+    margin-right: 0px;
+    font-size: 30px;
+  }
+
+  .classymod #title {
+    width: 530px;
+    margin-right: 0px;
+    font-size: 40px;
+  }
+
+  .impactmod #title{
+    width: 530px;
+    margin-right: 0px;
+    font-size: 25px;
+  }
+
+  #box{
+    width: 800px;
+    height: 450px;
+  }
+
+  #time{
+    width: 500px;
+    font-size: 120px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
   
 }
