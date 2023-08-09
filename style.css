@@ -210,108 +210,91 @@ input:checked + label {
     display: none;
 }
 
-  #popupDiv {
-    position: absolute;
-    top: 50%;
-    left: 48%;
-    width: 500px;
-    transform: translate(-50%, -50%);
-    background-color: #454545;
-    padding: 20px;
-    display: none;
-    z-index: 2;
-    color: #fff;
-    border-radius: 10px;
-    font-family: 'Inria Sans', sans-serif;
-}
-
-#end{
-  display: flex;
-  justify-content: end;
-}
-
-#close{
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-self: end;
-}
-
-#change{
-  background-color: #000000;
-  color: #fff;
-  width: 200px;
-  border-radius: 8px;
-  padding: 5px;
-  font-size: 15px;
-  margin-left: 45px;
-}
-
-#tag{
-  opacity: 0.75;
-  display: flex;
-  justify-content: space-around;
-}
-
-h2{
-  margin-left: 40px;
-  opacity: 0.75;
-}
-
-.inputtim{
-  width: 60px;
-  text-align: center;
-  background-color: #000000;
-  font-size: 15px;
-  color: #fff;
-  padding: 8px;
-}
-
-#timeInput1{
-  margin-left: 46px;
-}
-
-#timeInput2{
-  margin-left: 80px;
-}
-
-#timeInput3{
-  margin-left: 80px;
-}
-
-#volumeSlider {
-  width: 70%;
-  height: 15px;
-  background-color: #ffffff;
-  outline: none;
-  border-radius: 30px;
-  margin-left: 75px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#volumeSlider::-webkit-slider-thumb {
-  appearance: none;
-  width: 30px; 
-  height: 30px; 
-  background-color: #ffffff;
-  border-radius: 50%;
-  border: solid 1px;
-  cursor: pointer;
-}
-
-#volumeSlider::-moz-range-thumb {
-  appearance: none;
-  width: 30px; 
-  height: 30px; 
-  background-color: #ffffff;
-  border-radius: 50%;
-  border: solid 1px;
-  cursor: pointer;
-}
 
 @media screen and (max-width: 320px){
+  #inbox {
+    margin: 0;
+  }
+
+  #head{
+    justify-content: center;
+  }
+
+  #title{
+    width: 310px;
+    margin-right: 0px;
+    font-size: 30px;
+  }
+
+  .gear{
+    margin-right: 20px;
+  }
+
+  .classymod #title {
+    width: 310px;
+    margin-right: 0px;
+    font-size: 40px;
+    line-height: 30px;
+  }
+
+  .impactmod #title{
+    width: 310px;
+    margin-right: 0px;
+    font-size: 25px;
+  }
+
+  #box{
+    width: 320px;
+    height: 300px;
+    border-radius: 0;
+  }
+
+  #time{
+    width: 220px;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 70px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .classymod #time{
+    border: none;
+    font-size: 120px;
+  }
+
+  .impactmod #time{
+    font-family: 'Emblema One', cursive;
+    background-color: transparent;
+    color: black;
+  }
+
+  #start{
+    width: 250px;
+    font-size: 20px;
+  }
+
+  .classymod #start{
+    font-size: 25px;
+  }
+
+  .impactmod #start{
+    
+    font-size: 25px;
+  }
+
+  label{
+    background-color: transparent;
+    font-size: 12px;
+    padding:5px 15px 10px 15px;
+    margin-right: 0px;
+    cursor: pointer;
+  }
+
+  .classymod label{
+    font-size: 25px;
+    padding:5px 15px 10px 20px;
+  }
 
 }
 
@@ -398,40 +381,6 @@ h2{
     font-size: 25px;
   }
 
-  #popupDiv {
-    top: 50%;
-    left: 50%;
-    width: 300px;
-}
-
-#timeInput1{
-  margin-left: 15px;
-}
-
-#timeInput2{
-  margin-left: 15px;
-}
-
-#timeInput3{
-  margin-left: 15px;
-}
-
-#volumeSlider {
-  width: 80%;
-  height: 10px;
-  margin-left: 35px;
-}
-
-#volumeSlider::-webkit-slider-thumb {
-  width: 25px; 
-  height: 25px; 
-}
-
-#volumeSlider::-moz-range-thumb {
-  width: 25px; 
-  height: 25px; 
-}
-
   
 
 }
@@ -493,7 +442,7 @@ h2{
   }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 1025px){
+@media screen and (max-width: 1879px) and (min-width: 1025px){
 
   #inbox {
     margin: 0;

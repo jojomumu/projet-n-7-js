@@ -13,6 +13,8 @@
 
     <body>
 
+        <my-popup></my-popup>
+
        <div id="biggestbox">
 
             <div id="inbox">
@@ -65,51 +67,10 @@
 
                 <div class="popup-overlay" id="popupOverlay"></div>
 
-
-                <div id="popupDiv">
-
-                    <div id="end">
-                    
-                    <button onclick="hidePopup()" id="close"><img src="media/cross.png" alt="cross" width="40" height="40"></button>
-                    
-                    </div>
-
-                    <h2>Select theme :</h2>
-
-                    <select name="theme" id="change" onchange="changeTheme(this.value)">
-                        <option value="Simple">Simple</option>
-                        <option value="Classy">Classy</option>
-                        <option value="Impact">Impact</option>
-                    </select>
+                <popup-div></popup-div>
 
 
-                    <h2>Timers :</h2>
-
-                    <div id="timech">
-
-                        <input type="text" id="timeInput1" class="inputtim" value="25" oninput="updateTime(1)">
-                        
-                        
-                        <input type="text" id="timeInput2" class="inputtim" value="20" oninput="updateTime(2)">
-                        
-                        
-                        <input type="text" id="timeInput3" class="inputtim" value="5" oninput="updateTime(3)">
-                        
-
-                    </div>
-
-                    <div id="tag">
-                        <p>pomo</p>
-                        <p>long</p>
-                        <p>short</p>                  
-                    </div>
-
-                    <h2>Alert volume :</h2>
-
-                    <audio id="timerEndSound" src="media/bell.mp3"></audio>
-                    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
-
-                </div>
+                
 
 
             </div>
