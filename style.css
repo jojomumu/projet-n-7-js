@@ -9,6 +9,16 @@
     background-color: #906256;
     color: #4E342D;
     font-family: 'Hahmlet', serif;
+    transition: background-color 1s ease, color 0.5s ease;
+  }
+  
+  #logo-simple,
+  #logo-classy,
+  #logo-impact,
+  #gear-simple,
+  #gear-classy,
+  #gear-impact {
+    transition: display 1s ease;
   }
   
   .classymod {
@@ -170,6 +180,10 @@ input:checked + label {
     color: var(--primary-color);
   }
 
+  .impactmod :hover + label{
+    color: #848484;
+  }
+
   #start{
     width: 340px;
     padding: 15px;
@@ -198,6 +212,11 @@ input:checked + label {
 
   #gear{
     cursor: pointer;
+    transition: transform 5s ease;
+  }
+
+  #gear.rotate {
+    transform: rotate(360deg);
   }
 
   .popup-overlay {

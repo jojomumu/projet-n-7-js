@@ -68,6 +68,7 @@ class MyPopup extends HTMLElement {
     padding: 5px;
     font-size: 15px;
     margin-left: 45px;
+    margin-bottom: 20px
   }
 
   #tag{
@@ -130,6 +131,7 @@ class MyPopup extends HTMLElement {
 
   h2{
     margin-left: 40px;
+    margin-top: 0px;
     opacity: 0.75;
   }
 
@@ -300,15 +302,6 @@ function getSelectedTime() {
   });
   });
   
-  timeInputs.forEach((input, index) => {
-  input.addEventListener("input", function () {
-    if (radioButtons[index].checked) {
-      minutes = parseInt(input.value, 10);
-      updateDisplay(minutes, 0);
-    }
-  });
-  });
-  
   
   let intervalId;
   let paused = true;
@@ -389,3 +382,9 @@ function getSelectedTime() {
   
   
   }
+
+  const gearIcon = document.getElementById("gear");
+
+gearIcon.addEventListener("click", function() {
+  gearIcon.classList.toggle("rotate");
+});
